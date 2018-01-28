@@ -3,9 +3,10 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: pota.aux
 The style file: mn2e.bst
 Database file #1: ref3.bib
+Warning--I didn't find a database entry for "Bottini05"
 You've used 28 entries,
             2735 wiz_defined-function locations,
-            742 strings with 10546 characters,
+            744 strings with 10564 characters,
 and the built_in function-call counts, 16830 in all, are:
 = -- 1501
 > -- 1636
@@ -44,3 +45,4 @@ warning$ -- 0
 while$ -- 114
 width$ -- 0
 write$ -- 284
+(There was 1 warning)
