@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  8 FEB 2018 22:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  10 FEB 2018 15:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -305,17 +305,17 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
 <figures/fov.png, id=18, 594.7821pt x 566.115pt>
 File: figures/fov.png Graphic file (type png)
  <use figures/fov.png>
-Package pdftex.def Info: figures/fov.png used on input line 79.
+Package pdftex.def Info: figures/fov.png used on input line 81.
 (pdftex.def)             Requested size: 416.34464pt x 396.2778pt.
 
 
 Package natbib Warning: Citation `Bottini05' on page 2 undefined on input line 
-98.
+107.
 
 <figures/slitdist.png, id=20, 433.62pt x 433.62pt>
 File: figures/slitdist.png Graphic file (type png)
  <use figures/slitdist.png>
-Package pdftex.def Info: figures/slitdist.png used on input line 118.
+Package pdftex.def Info: figures/slitdist.png used on input line 127.
 (pdftex.def)             Requested size: 240.0pt x 240.00029pt.
 
 [2]
@@ -329,17 +329,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: figures/fxcor_subplot.png Graphic file (type png)
 
 <use figures/fxcor_subplot.png>
-Package pdftex.def Info: figures/fxcor_subplot.png used on input line 202.
+Package pdftex.def Info: figures/fxcor_subplot.png used on input line 210.
 (pdftex.def)             Requested size: 240.0pt x 240.00029pt.
 
 <figures/vstack_spectra.png, id=35, 433.62pt x 578.16pt>
 File: figures/vstack_spectra.png Graphic file (type png)
 
 <use figures/vstack_spectra.png>
-Package pdftex.def Info: figures/vstack_spectra.png used on input line 209.
+Package pdftex.def Info: figures/vstack_spectra.png used on input line 217.
 (pdftex.def)             Requested size: 240.0pt x 320.0004pt.
 
-Underfull \hbox (badness 1259) in paragraph at lines 210--210
+Underfull \hbox (badness 1259) in paragraph at lines 218--218
 []\OT1/ptm/b/n/8 Figure 4. \OT1/ptm/m/n/8 A sam-ple of GC spec-tra suit-ably no
 r-malised. Shown are
  []
@@ -349,48 +349,52 @@ Underfull \vbox (badness 1817) has occurred while \output is active []
 
  [5 <./figures/fxcor_subplot.png> <./figures/vstack_spectra.png>]
 
-LaTeX Warning: Command \r invalid in math mode on input line 225.
+LaTeX Warning: Command \r invalid in math mode on input line 233.
 
 <figures/internal.png, id=43, 433.62pt x 216.81pt>
 File: figures/internal.png Graphic file (type png)
  <use figures/internal.png>
-Package pdftex.def Info: figures/internal.png used on input line 241.
+Package pdftex.def Info: figures/internal.png used on input line 249.
 (pdftex.def)             Requested size: 240.0pt x 120.00014pt.
 
 <figures/vel_literature.png, id=44, 433.62pt x 289.08pt>
 File: figures/vel_literature.png Graphic file (type png)
 
 <use figures/vel_literature.png>
-Package pdftex.def Info: figures/vel_literature.png used on input line 265.
+Package pdftex.def Info: figures/vel_literature.png used on input line 273.
 (pdftex.def)             Requested size: 240.0pt x 160.00018pt.
- [6 <./figures/internal.png> <./figures/vel_literature.png>] <figures/RV.png, i
-d=50, 433.62pt x 433.62pt>
+
+
+Package natbib Warning: Citation `Puzia11' on page 6 undefined on input line 30
+2.
+
+[6 <./figures/internal.png> <./figures/vel_literature.png>]
+<figures/RV.png, id=50, 433.62pt x 433.62pt>
 File: figures/RV.png Graphic file (type png)
-
-<use figures/RV.png>
-Package pdftex.def Info: figures/RV.png used on input line 307.
+ <use figures/RV.png>
+Package pdftex.def Info: figures/RV.png used on input line 315.
 (pdftex.def)             Requested size: 240.0pt x 240.00029pt.
- <figures/XY.png, id=51, 433.62pt x 433.62pt>
+
+<figures/XY.png, id=51, 433.62pt x 433.62pt>
 File: figures/XY.png Graphic file (type png)
-
-<use figures/XY.png>
-Package pdftex.def Info: figures/XY.png used on input line 308.
+ <use figures/XY.png>
+Package pdftex.def Info: figures/XY.png used on input line 316.
 (pdftex.def)             Requested size: 240.0pt x 240.00029pt.
 
-Underfull \hbox (badness 2735) in paragraph at lines 317--318
+Underfull \hbox (badness 2735) in paragraph at lines 325--326
 []\OT1/ptm/m/n/9 The left fig-ure shows that the ve-loc-ity dis-tri-bu-tion of
  []
 
 <figures/cc.png, id=52, 433.62pt x 433.62pt>
 File: figures/cc.png Graphic file (type png)
  <use figures/cc.png>
-Package pdftex.def Info: figures/cc.png used on input line 331.
+Package pdftex.def Info: figures/cc.png used on input line 339.
 (pdftex.def)             Requested size: 240.0pt x 240.00029pt.
 
 <figures/cm.png, id=53, 433.62pt x 433.62pt>
 File: figures/cm.png Graphic file (type png)
  <use figures/cm.png>
-Package pdftex.def Info: figures/cm.png used on input line 332.
+Package pdftex.def Info: figures/cm.png used on input line 340.
 (pdftex.def)             Requested size: 240.0pt x 240.00029pt.
  [7]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -400,7 +404,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <figures/vrms.png, id=65, 462.528pt x 346.896pt>
 File: figures/vrms.png Graphic file (type png)
  <use figures/vrms.png>
-Package pdftex.def Info: figures/vrms.png used on input line 357.
+Package pdftex.def Info: figures/vrms.png used on input line 365.
 (pdftex.def)             Requested size: 240.0pt x 180.00055pt.
 Missing character: There is no â in font cmr9!
 Missing character: There is no € in font cmr9!
@@ -421,10 +425,10 @@ Package natbib Warning: There were undefined citations.
 
 [10] (./pota.aux) ) 
 Here is how much of TeX's memory you used:
- 3729 strings out of 493117
- 49486 string characters out of 6135433
- 127006 words of memory out of 5000000
- 7096 multiletter control sequences out of 15000+600000
+ 3736 strings out of 493117
+ 49612 string characters out of 6135433
+ 127200 words of memory out of 5000000
+ 7103 multiletter control sequences out of 15000+600000
  38242 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,15n,34p,1499b,305s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -446,7 +450,7 @@ e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/
 ive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/t
 exmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/
 fonts/type1/urw/times/utmri8a.pfb>
-Output written on pota.pdf (10 pages, 5862649 bytes).
+Output written on pota.pdf (10 pages, 5862757 bytes).
 PDF statistics:
  129 PDF objects out of 1000 (max. 8388607)
  77 compressed objects within 1 object stream

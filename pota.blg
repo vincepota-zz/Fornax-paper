@@ -4,45 +4,46 @@ The top-level auxiliary file: pota.aux
 The style file: mn2e.bst
 Database file #1: ref3.bib
 Warning--I didn't find a database entry for "Bottini05"
-You've used 28 entries,
+Warning--I didn't find a database entry for "Puzia11"
+You've used 30 entries,
             2735 wiz_defined-function locations,
-            744 strings with 10564 characters,
-and the built_in function-call counts, 16830 in all, are:
-= -- 1501
-> -- 1636
+            759 strings with 11043 characters,
+and the built_in function-call counts, 17786 in all, are:
+= -- 1586
+> -- 1722
 < -- 4
-+ -- 582
-- -- 581
-* -- 1769
-:= -- 3123
++ -- 612
+- -- 611
+* -- 1865
+:= -- 3304
 add.period$ -- 0
-call.type$ -- 28
-change.case$ -- 306
-chr.to.int$ -- 27
-cite$ -- 28
-duplicate$ -- 323
-empty$ -- 476
-format.name$ -- 613
-if$ -- 2993
+call.type$ -- 30
+change.case$ -- 324
+chr.to.int$ -- 29
+cite$ -- 30
+duplicate$ -- 344
+empty$ -- 507
+format.name$ -- 645
+if$ -- 3161
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 28
-newline$ -- 88
-num.names$ -- 114
-pop$ -- 251
+missing$ -- 30
+newline$ -- 94
+num.names$ -- 122
+pop$ -- 267
 preamble$ -- 1
-purify$ -- 333
+purify$ -- 353
 quote$ -- 0
-skip$ -- 491
+skip$ -- 521
 stack$ -- 0
-substring$ -- 647
-swap$ -- 40
+substring$ -- 681
+swap$ -- 42
 text.length$ -- 2
-text.prefix$ -- 193
+text.prefix$ -- 203
 top$ -- 0
-type$ -- 252
+type$ -- 270
 warning$ -- 0
-while$ -- 114
+while$ -- 121
 width$ -- 0
-write$ -- 284
-(There was 1 warning)
+write$ -- 303
+(There were 2 warnings)
