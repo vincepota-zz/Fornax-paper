@@ -13,8 +13,8 @@
 \setlength{\tabcolsep}{0.06in}  
  
 \title[The Fornax Cluster VLT Spectroscopic Survey]{The Fornax Cluster VLT 
-Spectroscopic Survey. I -- Spectroscopy and compilation of the globular cluster 
-catalogue in the cluster core}
+Spectroscopic Survey. I -- Compilation of the spectroscopic globular cluster catalogue in the 
+cluster core}
 
 \author[Pota et al.]{\noindent
 V. Pota$^{1}$\thanks{E-mail: vincenzo.pota@gmail.com}, 
@@ -38,26 +38,28 @@ M. Norris$^{9}$,
 T. Puzia$^{10}$ ,
 T. Lisker$^{8}$,
 \and 
-R. Munoz$^{10}$ ,
+R. Munoz$^{10}$,
 P. Schipani$^{1}$,
 P. Eigenthaler$^{10,11}$,
 M. A. Taylor$^{12}$,
-R S. Janssen$^X$,
-Y. {\'O}rdenes$^X$
+\and
+R. S\'anchez-Janssen$^{14}$,
+Y. Ordenes-Brice\~no$^{8,10}$
 \\~\\
 $^1$ INAF -- Osservatorio Astronomico di Capodimonte, Salita Moiariello, 16, 80131 - Napoli, Italy\\
 $^2$ European Southern Observatory, Karl-Schwarzschild-Stra{\ss}e 2, 85748 Garching bei Munchen, Germany\\
 $^3$ INAF – Astronomical Observatory of Abruzzo, Via Maggini, 64100, Teramo, Italy\\
 $^4$ Kapteyn Astronomical Institute, University of Groningen, PO Box 800, 9700 AV Groningen, The Netherlands\\
 $^5$ Dipartimento di Fisica Ettore Pancini, Universit\`a di Napoli Federico II,via Cintia, 80126 - Napoli Italy\\
-$^6$ Smithsonian Astrophysical Observatory/Chandra X-ray centre, 02138 Cambridge (MA), US\\
+$^6$ Harvard-Smithsonian Center for Astrophysics, 60 Garden St., Cambridge (MA), 02138, US\\
 $^7$ University of California at Santa Cruz, Astronomy and Astrophysics Department, US\\
 $^8$ Astronomisches Rechen-Institut Zentrum f{\"u}r Astronomie M{\"o}nchhofstra{\ss}e 12-14 69120 Heidelberg, Germany \\
 $^9$ Jeremiah Horrocks Institute, University of Central Lancashire, Preston, PR1 2HE, United Kingdom\\
 $^{10}$ Pontificia Universidad Catolica de Chile, Av. Vicuna Mackenna 4860, Santiago, Chile \\
 $^{11}$ CASSACA, Camino El Observatorio 1515, Las Condes, Santiago, Chile\\
 $^{12}$ Gemini Observatory, Northern Operations Center, 670 North A’ohoku Place, Hilo, HI 96720, USA\\
-$^{13}$ INFN, Sezione di Napoli, via Cintia, 80126, Napoli, Italy
+$^{13}$ INFN, Sezione di Napoli, via Cintia, 80126, Napoli, Italy\\
+$^{14}$ UK Astronomy Technology Centre, Royal Observatory Edinburgh, Blackford Hill, Edinburgh, EH9 3HJ, U
 }
 
 \voffset=-0.6in
@@ -68,12 +70,13 @@ $^{13}$ INFN, Sezione di Napoli, via Cintia, 80126, Napoli, Italy
 \maketitle
 \begin{abstract}
 We present the results of a wide spectroscopic survey aimed at detecting 
-extragalactic globular clusters (GCs) in the core of the Fornax cluster. This 
-program is part of the Fornax Cluster VLT Spectroscopic Survey (FVSS) whose goal 
-is to gather kinematical information of stars and compact sources in the Fornax 
-Core using different VLT instruments, in synergy with the Fornax Deep Survey 
-carried out at the VLT Survey Telescope (VST). GC candidates were selected in 
-multi-band VST and VISTA images. About 4500 low resolution spectra (from 4800 
+extragalactic globular clusters (GCs) in the core of the Fornax cluster. 
+%This program is part of the Fornax Cluster VLT Spectroscopic Survey (FVSS) whose goal 
+%is to gather kinematical information of stars and compact sources in the Fornax 
+%Core using different VLT instruments, in synergy with the Fornax Deep Survey 
+%carried out at the VLT Survey Telescope (VST). 
+%GC candidates were selected in multi-band VST and VISTA images. 
+About 4500 low resolution spectra (from 4800 
 to 10000 \AA) were observed in 25 VLT/VIMOS masks covering the central 1 deg$^2$ 
 around the dominant galaxy NGC~1399 corresponding to $\sim$200 kpc. We describe 
 the methodology used for data reduction and data analysis. We found a total of 
@@ -133,7 +136,7 @@ cosmic web filament \citep{Drinkwater00,Scharf05}.
 
 The Fornax Deep Survey\footnote{ESO programme ID (094.B-0687)} (FDS) is a joint 
 project based on Guaranteed Time Observation surveys, FOCUS (P.I. R. Peletier) 
-and VEGAS (P.I. E. Iodice, \citealt{capaccioli+15}), aimed to study the 
+and VEGAS (P.I. E. Iodice, \citealt{capaccioli+15}), aimed at studying the 
 formation and assembly of the Fornax Cluster out to its virial radius with a 
 variety of observations. These include
 deep photometry, supplemented by cross-match with other wavelength observations 
@@ -259,7 +262,7 @@ polygon.
 
 As shown in Sect. 2.2, the final 
 mask design resulted in slit allocations on 4340 unique spectroscopic targets. 
-4321 of those have giKs photometry, and 2643 (or $\sim$ 61 \%) of them are 
+4321 of those have $giK_s$ photometry, and 2643 (or $\sim61$\%) of them are 
 contained in the selection polygon defined for potential GCs in the $giK_s$ space. 
 We note that the missing u-band information in this colour space leads to a 
 high fraction of contaminating foreground stars and background galaxies (see Sect. 3.1).
@@ -267,9 +270,6 @@ high fraction of contaminating foreground stars and background galaxies (see Sec
 Here, we applied a magnitude restriction of 17.0$<i<$23.0 mag to our GC 
 candidate sample in order to avoid severe contamination by foreground stars on 
 the bright side and too low signal-to-noise spectra on the faint side. 
-%The magnitude distribution of the above mentioned 4321 unique spectroscopic 
-%targets can be seen in the $(g-i)$ vs. $i$ CMD of FigureXX 
-%(fnxgtocmdgiKadp.pdf).
 For the very central regions of NGC~1399, which are dominated by the galaxy 
 light, we found additional GC candidates taking advantage of the more accurate 
 photometry and morphological classification derived from {\it Hubbe Space 
@@ -376,14 +376,13 @@ The seeing ranged from 0.66 arcsec to 1.15 arcsec, with a median of 0.85 arcsec.
 
 The reduction of the VIMOS data was performed using the Reflex 
 environment \citep{Freudling13} of the ESO VIMOS pipeline. 
-For each VIMOS mask, the data consist of four 
-quadrants with three individual exposures for each quadrant, flat fields and
-arc lamp calibration exposures that were taken directly after the science 
+For each VIMOS mask, the data consist of the scientific images, flat fields and
+arc lamp calibration images taken immediately after the science 
 exposures. Each science exposure has a distribution of slits containing the 
-science spectra of the targets contaminated by the emission spectrum of the 
-earth's atmosphere. Since the wavelengths of the sky emission lines are 
-precisely known they can be used for the absolute wavelength calibration of 
-the spectra.
+science spectra of the targets. Indeed every slit is also contaminated by the 
+emission spectrum of the earth's atmosphere. Since the wavelengths of the 
+sky emission lines are precisely known they can be used for the absolute 
+wavelength calibration of the spectra.
 
 In order to obtain the final wavelength calibrated science spectra, we 
 proceeded as follows. First, a wavelength calibration 
@@ -742,7 +741,7 @@ and 372 likely GCs.
 
 The object with coordinates $\alpha=$3:36:37.253 $\delta=-$35:23:09.20 is the nucleus of the 
 nucleated dwarf galaxy FCC~171, whose radial velocity was first measured in 
-\citet{Bergond07}. This object will included in the GC sample in the following 
+\citet{Bergond07}. This object will be included in the GC sample in the following 
 analysis.  
 %Our catalogue also includes the UCD FCSS J033854.1-353333,  with radial 
 %velocity $v_r = 1492 \kms$ \citet{Chilingarian11}. 
@@ -879,38 +878,6 @@ property also visible in Figure \ref{fig:phase-space}). This effect was already
 noticed in \citet{Schuberth}. The convincing separation between GCs and stars 
 also ensures that this property is unlikely due to miss-classified GCs. 
 
-\subsection{Root-mean-square velocity profile}
-The root-mean-square velocity $v_{\rm rms}$ quantifies the total kinetic energy 
-of a stellar system. It accounts both for the ordered and for the random 
-stellar motions. Here we compute the root-mean-square velocity as:
-\begin{equation}
-v_{\rm rms}^2 = \frac{1}{N}  \sum (v_i - v_{\rm sys})^2 - (\Delta v_i)^2 .
-\label{eq:sigma}
-\end{equation}
-where $v_i$ is the radial velocity of the i-th GC and $\Delta v_i$ is its 
-uncertainty. $v_{\rm sys}=1425 \kms$ is the systemic velocity of NGC~1399. 
-Uncertainties were derived with the formulae provided by \citet{Danese}. 
-The statistical error discussed in Section \ref{sec:analysis}.
-
-The $v_{\rm rms}$ has been calculated using a total of 1133 unresolved objects 
-(inlcuding GCs and UCDs). Although we cannot exclude that GCs and UCDs are 
-decoupled populations, 
-the fraction of classified UCDs is modest to affect the overall average 
-kinematics of the combined populations. A detailed analysis of UCDs is beyond 
-the purpose of this paper,
-however, looking at Fig. \ref{fig:phase-space}, object classified as UCDs do 
-not show any evident systematic difference with respect to the GC systems. 
-The final catalogue is made of the 387 objects discussed in this paper 
-combined with the catalogues of \citet{Bergond07} and \citet{Schuberth}. Our master catalogue
-includes GCs from other giant galaxies in the field. If an 
-object was found in more than one catalogue we computed its average radial 
-velocity with the uncertainties summed in quadrature. Also, GCs and UCDs from 
-literature catalogues were given the VST photometry discussed in this work. 
-Therefore, no photometric calibration was required, e.g. to obtain Fig. 
-\ref{fig:cc}. The $v_{\rm rms}$ profile is computed in radial bins of irregular 
-size. However, each bin contains roughly the same number of objects, namely: 
-48, 66, 88 objects per bin for the blue, red and all GCs (including UCDs), respectively. 
-
 \begin{figure*}
 \centering
 \includegraphics[scale = 0.8]{figures/vrms_pne.png} 
@@ -927,6 +894,38 @@ dispersion derived for Fornax galaxies by \citet{Drinkwater00}.}
 \label{fig:vrms}
 \end{figure*}
 
+\subsection{Root-mean-square velocity profile}
+The root-mean-square velocity $v_{\rm rms}$ quantifies the total kinetic energy 
+of a stellar system. It accounts both for the ordered and for the random 
+stellar motions. Here we compute the root-mean-square velocity as:
+\begin{equation}
+v_{\rm rms}^2 = \frac{1}{N}  \sum (v_i - v_{\rm sys})^2 - (\Delta v_i)^2 .
+\label{eq:sigma}
+\end{equation}
+where $v_i$ is the radial velocity of the i-th GC and $\Delta v_i$ is its 
+uncertainty. $v_{\rm sys}=1425 \kms$ is the systemic velocity of NGC~1399. 
+Uncertainties were derived with the formulae provided by \citet{Danese}. 
+The statistical error discussed in Section \ref{sec:analysis}.
+
+The $v_{\rm rms}$ has been calculated using a total of 1133 unresolved objects 
+(including GCs and UCDs). Although we cannot exclude that GCs and UCDs are 
+decoupled populations, 
+the fraction of classified UCDs is too modest to affect the overall average 
+kinematics of the combined populations. A detailed analysis of UCDs is beyond 
+the purpose of this paper,
+however, looking at Fig. \ref{fig:phase-space}, object classified as UCDs do 
+not show any evident systematic difference with respect to the GC systems. 
+The final catalogue is made of the 387 objects discussed in this paper 
+combined with the catalogues of \citet{Bergond07} and \citet{Schuberth}. Our master catalogue
+includes GCs from other giant galaxies in the field. If an 
+object was found in more than one catalogue we computed its average radial 
+velocity with the uncertainties summed in quadrature. Also, GCs and UCDs from 
+literature catalogues were given the VST photometry discussed in this work. 
+Therefore, no photometric calibration was required, e.g. to obtain Fig. 
+\ref{fig:cc}. The $v_{\rm rms}$ profile is computed in radial bins of irregular 
+size. However, each bin contains roughly the same number of objects, namely: 
+48, 66, 88 objects per bin for the blue, red and all GCs (including UCDs), respectively. 
+
 Figure \ref{fig:vrms} displays the $v_{\rm rms}$ profile for: i) our combined master 
 catalogue of 1133 GCs and UCDs, including literature objects; ii) the GC catalogue of 
 \citet{Schuberth}, iii) the central stars of galaxies surrounding NGC~1399; iv) 
@@ -941,23 +940,34 @@ kinematics of the central galaxies. However, looking at the $v_{\rm rms}$
 profile of the total sample (shaded gray area) there is a steep rise in the 
 profile around $R\sim10$ arcmin which marks a kinematical transition from a 
 ``colder'' kinematical region ($\sim 50$ Kpc) to a ``warmer'' one. 
-The same behaviour can be observed in the PNs datapoints 
+The same behavior can be observed in the PNs datapoints 
 (magenta triangles). As discussed in FVSS-II, the peak in $v_{\rm rms}$ 
 of the point around $R\sim 8$ arcmin, could partially be due to NGC~1404. 
 In fact, Planetaries bounded to this galaxy could possibly contaminate the sample, 
 causing an increase of the $v_{\rm rms}$ in that particular radial bin.
 
+Regarding the data form Schuberth et al., we use their full data dataset (corresponding to 
+sample BI and RI in their Table A.1) because its properties are akin to those of our master catalogue.
+The $v_{\rm rms}$ profile is in general agreement for the red GCs, but we
+observe a disagreement for blue GCs in the region $5<R<10$ arcmin, where the data from 
+Schuberth et al. are systematically higher than our datapoints. Such a discrepancy
+might be due to the different colour threshold used for the blue/red separation: we
+use $(g-i) = 0.85$ mag, whereas Schubert et al. use $(g-i) = 0.91$ mag (after converting
+their Washington magnitudes to SDSS magnitudes). Also, we applied no magnitude cut before
+calculating the $v_{\rm rms}$, whereas Schubert et al. only considered GCs brighter than $R>21.1$ mag.
+
 In the outermost region, the $v_{\rm rms}$ profile flattens out to a value which is 
 fairly consistent with the kinematics of the cluster galaxies (the green data 
 point at $R\sim35$ arcmin from \citealt{Drinkwater00}). This suggests that the GC 
-kinematics at radii larger than 10 arcmin is ruled by the cluster potential. 
+kinematics at radii $R>10$ arcmin is ruled by the cluster potential. 
 This feature demonstrates kinematically that the photometric transition radius 
 between the bright central galaxy and the outer exponential halo at $R\sim10$ 
 arcmin from \citet{Iodice16} represents the radius where we observe the 
-emergence of an intracluster population of GCs and PNe. Hence multiple lines of 
-evidence are converging, for the first time, on the existence of a 
-photometrically and kinematically distinct intracluster light population in the 
-Fornax Cluster core.
+emergence of an intracluster population of GCs and PNe. 
+At the light of similar conclusions found for PNs by Spiniello et al.(2018, submitted), 
+there is  growing evidence that multiple independent lines of investigation 
+are starting to support, for the first time, the existence of a photometrically 
+and kinematically distinct intracluster light population in the Fornax Cluster core
 
 When split in the red and blue subpopulations, using a colour cut at $(g - i) = 0.85$ 
 the GC sample shows some systematic differences. At all radii the $v_{\rm rms}$ 
@@ -1023,7 +1033,7 @@ In this paper, we presented the results of the widest spectroscopic survey of
 GCs in the Fornax cluster ever realised, focusing on observations, data 
 reduction and presentation of the final catalogue. This is the first work of a 
 larger multi-instrument program dubbed the Fornax Cluster VLT Spectroscopic 
-Survey (FVSS), which, in sinergy with the ongoing Fornax Deep Survey (FDS), 
+Survey (FVSS), which, in synergy with the ongoing Fornax Deep Survey (FDS), 
 aims to study the formation, evolution and dynamics of galaxies and small 
 stellar systems in the Fornax cluster.
 
@@ -1066,34 +1076,31 @@ the outer exponential halo at $R\sim10$ arcmin from \citet{Iodice16} and
 show, from the dynamical point of view, the emergence of an intracluster 
 population of GCs (as well as PNe) in the Fornax Cluster.
 
-\section{Acknowledgments}
+\section*{Acknowledgments}
 
 NRN and EI acknowledge financial support from the European Union’s Horizon
 2020 research and innovation programme under the Marie Sk\l{}odowska-Curie
 grant agreement No 721463 to the SUNDIAL ITN network and  PRIN INAF 2014 
 ``Fornax Cluster Imaging and Spectroscopic Deep Survey''.
-
 CT is supported through an NWO-VICI grant (project number 639.043.308).
-
 CSpiniello has received funding from the European Union's Horizon 2020 
 research and innovation programme under the Marie Sklodowska-Curie 
 actions grant agreement n. 664931.
-
 M.P. acknowledges financial contribution from the agreement ASI-INAF n.2017-14-H.O.
-
 T.L. acknowledges financial support from the European Union's Horizon 2020 
 research and innovation programme under the Marie Sk\l{}odowska-Curie 
 grant agreement No.\ 721463 to the SUNDIAL ITN network.
-
 P.E. acknowledges support from the Chinese Academy of Sciences (CAS) 
 through CAS-CONICYT Postdoctoral  Fellowship CAS150023 administered 
 by the CAS South America Center for Astronomy (CASSACA) in Santiago,  Chile.
-
 MS acknowledge finacial support from the VST project (P.I. P. Schipani).
-
 The authors acknowledge financial support from the European Union’s 
 Horizon 2020 research and innovation programme under Marie Sk\l{}odowska-Curie 
 grant agreement No 721463 to the SUNDIAL ITN network.
+GvdV acknowledges funding from the European Research Council (ERC) under 
+the European Union's Horizon 2020 research and innovation programme 
+under grant agreement No 724857 (Consolidator Grant ArcheoDyn).
+R.D'A. is supported by NASA contract NAS8-03060 (Chandra X-ray Center).
 
 \bibliographystyle{mn2e}
 \bibliography{ref3}
