@@ -27,14 +27,14 @@ C. Tortora$^{4}$,
 E. Iodice$^{1}$, 
 M. Paolillo$^{5,13}$,
 R. D'Abrusco$^{6}$,
-A. J. Romanowsky$^{7}$,
 M. Capaccioli$^{5}$, 
+T. Puzia$^{10}$ ,
 \and 
 R. F. Peletier$^{4}$,
+A. J. Romanowsky$^{7}$,
 G. van de Ven$^{2}$,
 C. Spiniello$^{1}$,
 M. Norris$^{9}$,
-T. Puzia$^{10}$ ,
 T. Lisker$^{8}$,
 \and 
 R. Munoz$^{10}$,
@@ -274,7 +274,7 @@ and analyze the globular cluster systems in Fornax (îrdenes-Brice–o et al. 20
 
 \subsection{Selection of globular cluster candidates}
 \label{sec:selectionGC}
-The selection of GC candidates was based on VST/OmegaCAM photometry in the $g$ 
+The selection of GC candidates was based on VST/OmegaCAM photometry in the de-reddened $g$ 
 and $i$ band from the FDS \citep{DAbrusco16,Iodice16} and preliminary 
 VISTA/VIRCAM photometry in the $K_s$ band from the NGFS. 
 In the combined 2-colour $g i K_s$ diagram, confirmed GCs from \citet{Schuberth}
@@ -324,7 +324,7 @@ Software, \citealt{Bottini05}) from ESO.
 \label{sec:VIMOSpointings}
 
 A total of 25 VIMOS masks were designed covering the central square degree 
-around NGC~1399. The mask pointings were dithered in such a way that the gaps between 
+around NGC~1399. The mask pointings were micro-dithered in such a way that the gaps between 
 the four VIMOS CCDs (or quadrants) were covered by the adjacent mask. 
 
 In Figure \ref{fig:fov} we show the spatial distribution of the VIMOS 
@@ -410,7 +410,7 @@ The seeing ranged from 0.66 arcsec to 1.15 arcsec, with a median of 0.85 arcsec.
 
 The reduction of the VIMOS data was performed using the Reflex 
 environment \citep{Freudling13} of the ESO VIMOS pipeline. 
-For each VIMOS mask, the data consist of the scientific images, flat fields and
+For each VIMOS pointing, the data consist of the scientific images, flat fields and
 arc lamp calibration images taken immediately after the science 
 exposures. Each science exposure has a distribution of slits containing the 
 science spectra of the targets. Indeed every slit is also contaminated by the 
@@ -420,9 +420,9 @@ wavelength calibration of the spectra.
 
 In order to obtain the final wavelength calibrated science spectra, we 
 proceeded as follows. First, a wavelength calibration 
-is performed using the provided arc lamp spectrum. Second, we calculated
-the residual shift of the sky lines with respect to their rest frame 
-wavelength. For this purpose we provided our own sky line catalog, in which 
+is performed using the provided arc lamp spectrum. Second, we calculated the residual 
+shift of the sky emission lines with respect to their rest frame wavelength. 
+For this purpose we provided our own sky line catalog, in which 
 the wavelengths of prominent sky lines, in particular in the Ca triplet (CaT)
 region, are listed. The pipeline determines this shift for each spectrum in 
 each science exposure individually, which is essential because the wavelength 
@@ -431,7 +431,7 @@ first exposure and smallest for the third exposure. This
 is caused by the 
 change of instrument flexure between the first science exposure and the final 
 arc lamp exposure. In other words, the third science exposure is taken 
-closest in time, i.e. under almost the same instrument conditions, to the arc 
+closest in time, i.e. under almost the same instrument conditions to the arc 
 lamp exposure, and thus its wavelength calibration is the most accurate. 
 Finally, the pipeline stacks the three individual science exposures and 
 extracts sky subtracted object spectra from the combined science frame.
@@ -443,7 +443,7 @@ absolute wavelength calibration and also to a slight line broadening in the
 stacked spectra. Even though we cannot correct for the line broadening with
 the current ESO pipeline version, we found a workaround to correct for the
 absolute wavelength calibration of the spectra, which is necessary for an 
-accurate measurement of the radial velocities of the objects. To first order, 
+accurate measurement of the radial velocities of the objects. To zero-th order, 
 it can be assumed that the median wavelength shift in the stacked spectrum is 
 the same as the one derived for the second exposure. Thus, we re-reduced the 
 second science exposure of all available data to determine the median 
@@ -456,18 +456,21 @@ on the spectra corrected in this way.
 For each mask, the REFLEX pipeline outputs multi-extension fits files which 
 include the calibrated 2D spectra, the calibrated 1D spectra (and respective 
 errors) and a 2D model of the sky lines. To make the dataset more manageable, 
-we implemented a {\it python/astropy} script which copies different data structures 
+we implemented a {\it python/astropy} \citep{astropy} script which copies different data structures 
 corresponding to each slit into a multi-extension fits file. Each slit is 
 associated to a fits file which contains: the 1D scientific spectrum, the 1D 
 error spectrum, the sky-subtracted, wavelength-corrected 2D spectrum and a 
 thumbnail of the object of $5\times5$ arcsec$^2$ from $g$-band VST imaging. 
 
-\section{Redshift estimation}
+\section{Analysis}
+
+\subsection{Redshift estimation}
 \label{sec:zest}
 
-A total of 6700 spectra were extracted by the REFLEX pipeline. This number 
-includes the objects genuinely associated with the Fornax cluster (i.e., GCs, 
-UDCs or dwarf galaxies), as well as Galactic stars, background galaxies and 
+A total of 6700 spectra were extracted by the REFLEX pipeline. The number of spectra is larger
+than the number of slits because multiple spectra can be extracted from one slit. 
+These spectra belong to objects genuinely associated with the Fornax cluster (i.e., GCs, 
+UCDs or dwarf galaxies), as well as Galactic stars, background galaxies and 
 sources with signal-to-noise (S$/$N) too low to be classified with certainty. 
 
 Radial velocities were computed with {\it iraf/fxcor}, which performs 
@@ -480,12 +483,12 @@ the radial velocity and it is more CPU efficient.
 The Indo-U.S. Library of Coud\'e Feed Stellar Spectra \citep{Valdes04} was used 
 as library of template spectra. The library contains 1273 stellar spectra, 
 observed with a dispersion of $0.44$ \AA /pix and a resolution of $\sim 1$ \AA 
-. The spectra cover the 3460 -- 9464 \AA\ range, which overlaps nicely with the 
+. The spectra cover the 3460 -- 9464 \AA\ range, which overlaps adequately with the 
 wavelength range of our VIMOS spectra. From the whole library, we selected a 
 random subset of 40 stars with spectral types from \textit{F} to \textit{M} 
 because this is the range expected for metal-poor to metal-rich GCs. 
 
-The 40 stellar spectra were convoluted with a Gaussian filter of standard 
+The 40 stellar spectra were convolved with a Gaussian filter of standard 
 deviation $\sigma = 12.0\mbox{\AA\ } / 2.355$, where 12.0 \AA\ is the FWHM 
 resolution of our VIMOS spectra and 2.355 is the constant relating the FWHM with $\sigma$ . 
 
@@ -493,12 +496,12 @@ The scientific spectra were prepared as follows. First, we computed the median
 signal-to-noise per resolution element $S/N$, where the signal $S$ is measured in the range 
 5000-6600 \AA\ and the noise $N$ is the noise returned by the REFLEX pipeline 
 in the same wavelength range. Second, telluric bands in the range 6850 -- 7688 
-\AA\ and some troublesome skylines were replaced with the fit to the spectral 
+\AA\ and some bright skyline regions skylines were replaced with the fit to the spectral 
 continuum. The continuum was computed with iraf/continuum by averaging ten 
 contiguous pixels and interpolating the result with a cubic spline coupled with 
 a $3\sigma$ rejection algorithm.  
 
-Naively, one may think that cross-convolving the full wavelength range of our 
+Naively, one may think that cross-correlating the full wavelength range of our 
 VIMOS spectra will return more robust radial velocities because the number of 
 atomic lines used for the convolution is larger. Instead, we found that using 
 the whole wavelength range can increase uncertainties due to severe template 
@@ -547,8 +550,8 @@ spectra. Smaller TDR corresponds to larger velocity uncertainties $\delta v$
 (bottom panel) and therefore to a poorer spectral fit. The measured radial 
 velocity $v$ is shown on the y-axis of the top panel. The sequence of objects 
 at $v\approx 0 \kms$ are Galactic stars, whereas the cluster at 
-$v\approx1700\kms$ is composed by GC candidates in the Fornax cluster. The histogram on 
-the top shows raw counts for stars and Fornax objects only, respectively. }
+$v\approx1700\kms$ are sources in the Fornax cluster. The histogram on 
+the top shows raw counts for stars and Fornax objects, respectively.}
 \label{fig:tdr}
 \end{figure}
 
@@ -595,9 +598,9 @@ paper.
 Spectra of Fornax objects (GCs, UCDs) and Galactic star candidates were 
 redshift-corrected and visually inspected. We checked for the correct positions of the 
 following lines: CaT, H$\alpha (6563 \, \mbox{\AA})$, NaD$(5892 \, 
-\mbox{\AA})$, Mg$\beta (\sim 5175 \, \mbox{\AA})$ and H$\beta (\sim 4861\, 
+\mbox{\AA})$, the Mg$\beta triplet (\sim 5175 \, \mbox{\AA})$ and H$\beta (4861\, 
 \mbox{\AA})$. The CaT and H$\alpha$ lines, if present, are always visible, 
-whereas the Mg$\beta$ line is hardly recognizable in spectra with $S/N \lesssim 
+whereas the Mg$\beta$ lines are hardly recognizable in spectra with $S/N \lesssim 
 10$. The NaD is not always visible because this atomic line is shifted onto a 
 problematic sky line at 5860--5890 \AA\ for spectra with $v \lesssim 1000\kms$ . 
 The H$\beta$ line, at which the instrumental efficiency is less than $20$ per 
@@ -605,7 +608,7 @@ cent, can be discerned only for spectra with $S/N \gtrsim 20 $.
 
 Figure \ref{fig:spectra} showcases some spectra with $S/N$ ranging from 50 
 (bottom spectrum) to 15 (top spectrum). 
-The GG475-filters of the first and third quadrant, coupled with the MR-grism, 
+The GG475 filter of the first and third quadrant, coupled with the MR-grism, 
 introduce an absorption feature between about $5600 < \lambda < 6300$ \AA\ 
 (see the third spectrum from the bottom in Figure \ref{fig:spectra} for an 
 example). This occurs because the GG475-filter is composed of 10-20\% in its 
@@ -634,17 +637,17 @@ We repeated the above procedure to select a sample of spectroscopically
 confirmed Galactic stars with radial velocities in the range $-450<v<+450 
 \kms$, finding a total of 492 Galactic stars.
 
-Of the total $\sim4200$ slits, we have allocated $\sim$2400 slits on GC/UCD candidates, 
+Of the total $4574$ slits, we have allocated $\sim$2400 slits on GC/UCD candidates, 
 $\sim 800$ slits on background galaxies (selected via a star galaxy separation 
-based on their colors and stellarity index from Sextractor), and $\sim1000$ 
+based on their colors and stellarity index from SExtractor), and $\sim1000$ 
 on stars. \citet{Schuberth} have already spectroscopically confirmed the brightest GCs
-in the central regions of NGC~1399 and we retained more valuable to focus GC candidates 
-not yet confirmed in previous studies, while still observing a few tens of known GCs to calibrate 
+in the central regions of NGC~1399 and and we considered more valuable to focus on GC 
+candidates not yet confirmed by previous studies, while still observing a few tens of known GCs to calibrate 
 our velocity measurements against literature studies. The small recovery fraction we have 
 obtained ($\sim 17\%$) is due to a number of factors: contamination
 from stars and background galaxies in the fainter end of the GC 
 luminosities, low S/N objects due to their poor spectral quality (see Figure \ref{fig:tdr}),
-and observations at large galactocentric radii where the GC density is 
+and observation at large galactocentric radii where the GC density is 
 below 1 GC$/$ arcmin$^2$ (see Figure 15 in \citealt{Schuberth}). 
 
 \section{Results}
@@ -727,8 +730,8 @@ bias is detected. The root-mean-square of the velocity difference is $81 \kms$.
 \centering
 \includegraphics[width=\columnwidth]{figures/vel_literature.png} 
 \caption{Comparison with literature studies. The radial velocity of literature 
-objects is averaged among literature studies as discussed in the text. The 1 to 
-1 line is shown as a dashed line. }
+objects is averaged among literature studies as discussed in the text. The 1-to-1 
+line is shown as a dashed line. }
 \label{fig:vel_comparison}
 \end{figure}
  
@@ -768,12 +771,12 @@ future work.
 It is established that a sharp magnitude cut cannot perfectly separate UCDs 
 from GCs. However, it has been shown \citep{Voggel16, 
 Eigenthaler18} that the bulk of candidate UCDs with confirmed sizes in the Fornax cluster 
-have $M_V \le 10$ ($\approx M_i \le 11$). 
+have $M_V \le -10$ ($\approx M_i \le -11$). 
 Therefore, we use this magnitude cut as benchmark value to separate UCDs with 
 $i \le 20.3$ from GCs with $i > 20.3$. This selection returns 15 UCD candidates 
 and 372 likely GCs. 
 
-The object with coordinates $\alpha=$3:36:37.253 $\delta=-$35:23:09.20 is the nucleus of the 
+The object with coordinates RA(J2000) $=$ 3:36:37.253 DEC(J2000) $=$ 35:23:09.20 is the nucleus of the 
 nucleated dwarf galaxy FCC~171, whose radial velocity was first measured in 
 \citet{Bergond07}. This object will be included in the GC sample in the following 
 analysis.  
@@ -888,8 +891,7 @@ The figure shows the
 distribution of the labelled objects in a $(g-i)$ vs. $(g-r)$ space (left 
 panel) and $(g-i)$ vs $i$ space (right panel). Each diagram includes also a 
 radial velocity $v$ axis to show the separation of GCs/UCDs from stars and 
-galaxies. The objects labelled as `all' represent all sources targeted for 
-spectroscopic follow-up and not the photometric master catalogue.
+galaxies. The objects labelled as `all' represent all 4340 sources observed with VIMOS.
 %TP:Say here where the radial velocities of ÒallÓ the source in the very right panel come from. The last sentence is a little unclear. I marked the yellow section which is somewhat confusing. Perhaps, you could rephrase that part more clearly.
 }
 \label{fig:cc}
@@ -965,28 +967,29 @@ not show any evident systematic difference with respect to the GC systems.
 The final catalogue is made of the 387 objects discussed in this paper 
 combined with the catalogues of \citet{Bergond07} and \citet{Schuberth}. Our master catalogue
 includes GCs from other giant galaxies in the field. If an 
-object was found in more than one catalogue we computed its average radial 
+object was found in more than one catalogue we computed its weight-average radial 
 velocity with the uncertainties summed in quadrature. Also, GCs and UCDs from 
 literature catalogues were given the VST photometry discussed in this work. 
 Therefore, no photometric calibration was required, e.g. to obtain Fig. 
-\ref{fig:cc}. The $v_{\rm rms}$ profile is computed in radial bins of irregular 
-size. However, each bin contains roughly the same number of objects, namely: 
-48, 66, 88 objects per bin for the blue, red and all GCs (including UCDs), respectively. 
+\ref{fig:cc}. 
 
 Figure \ref{fig:vrms} displays the $v_{\rm rms}$ profile for: i) our combined master 
 catalogue of 1133 GCs and UCDs, including literature objects; ii) the GC catalogue of 
 \citet{Schuberth}, iii) the central stars of galaxies surrounding NGC~1399; iv) 
 all Fornax galaxies from \citet{Drinkwater00}, v) PNs from FVSS-II (Spiniello et al., 2018, submitted).
+The $v_{\rm rms}$ profile is computed in radial bins of irregular 
+size. However, each bin contains roughly the same number of objects, namely: 
+48, 66, 88 objects per bin for the blue, red and all GCs (including UCDs), respectively. 
 
 The master catalogue contains GCs and UCDs predominantly from NGC~1399, which 
-is the largest and more massive system in the field dominating the total 
+is the largest and most massive system in the field dominating the total 
 potential in the core of the cluster. Here, objects from other galaxies, 
 embedded in the extended exponential halo around the galaxy \citep{Iodice16}, 
 in particular NGC~1404, NGC~1387, are likely to contaminate the 
-kinematics of the central galaxies. However, looking at the $v_{\rm rms}$ 
+kinematics of the central galaxy. However, looking at the $v_{\rm rms}$ 
 profile of the total sample (shaded gray area) there is a steep rise in the 
-profile around $R\sim10$ arcmin which marks a kinematical transition from a 
-``colder'' kinematical region ($\sim 50$ Kpc) to a ``warmer'' one. 
+profile around $R\sim10$ arcmin ($\sim 50$ Kpc) which marks a kinematical transition from a 
+``colder'' kinematical region to a ``warmer'' one. 
 The same behavior can be observed in the PNs datapoints 
 (magenta triangles). As discussed in FVSS-II, the peak in $v_{\rm rms}$ 
 of the point around $R\sim 8$ arcmin, could partially be due to NGC~1404. 
@@ -1007,17 +1010,17 @@ In the outermost region, the $v_{\rm rms}$ profile flattens out to a value which
 fairly consistent with the kinematics of the cluster galaxies (the green data 
 point at $R\sim35$ arcmin from \citealt{Drinkwater00}). This suggests that the GC 
 kinematics at radii $R>10$ arcmin is ruled by the cluster potential. 
-This feature demonstrates kinematically that the photometric transition radius 
+This feature demonstrates that the photometric transition radius 
 between the bright central galaxy and the outer exponential halo at $R\sim10$ 
-arcmin from \citet{Iodice16} represents the radius where we observe the 
+arcmin from \citet{Iodice16} represents the radius where we kinematically observe the 
 emergence of an intracluster population of GCs and PNe. 
 At the light of similar conclusions found for PNs by Spiniello et al.(2018, submitted), 
 there is  growing evidence that multiple independent lines of investigation 
 are starting to support, for the first time, the existence of a photometrically 
-and kinematically distinct intracluster light population in the Fornax Cluster core
+and kinematically distinct intracluster component in the Fornax Cluster core
 
 When split in the red and blue subpopulations, using a colour cut at $(g - i) = 0.85$ 
-the GC sample shows some systematic differences. At all radii the $v_{\rm rms}$ 
+the GC sample shows some interesting differences. At all radii the $v_{\rm rms}$ 
 profile of the red GCs is systematically smaller than the one of the blue GCs, 
 albeit the two profiles are broadly consistent with each other within one sigma. 
 The $v_{\rm rms}$ of PNs is consistent with that of red GCs, as observed is 
@@ -1027,7 +1030,7 @@ those from \citet{Schuberth}. In particular the blue GCs turn out to
 be the more extended population in radius, nicely connecting to the value of 
 the cluster galaxy datapoint. The difference in normalisation between the two 
 populations may be driven by the different slopes of the two 
-populations density profiles as measured, e.g., by 
+populations' density profiles as measured, e.g., by 
 \citep[][their Eq. 10 and 11 and Table 5]{Schuberth}. 
 %However, the difference 
 %between the measured  slopes is so small that using Eq. 2 to 4 in \citet{Napolitano14} to 
@@ -1038,46 +1041,48 @@ populations density profiles as measured, e.g., by
 %typical errors. 
 
 Finally, we report in the same Figure the central velocity dispersions of 
-the galaxies populating the same area occupied by the total GC catalog. 
+the giant galaxies populating the same area occupied by the total GC catalogue (see Figure \ref{fig:fov}). 
 For NGC~1399, we show long slit data from \citet{Saglia00} up 
-to 1 arcmin, where the stellar velocity dispersion is nicely consistent with
+to 1 arcmin galactocentric radius, where the stellar velocity dispersion is consistent with
 the velocity dispersion of the innermost GCs.
-At larger distances one can expect that neighbouring 
+At larger distances one can expect that neighbouring galaxies might
 might contaminate the overall GC kinematics. Especially in the outer regions, 
 i.e. $R>10$ arcmin, assuming these regions are dominated by the cluster 
 potential, the presence of GCs bound to the galaxies might alter the true  
 intracluster population. A detailed separation of the bound GC population from 
-the true unbound (from any galaxy in the core) GCs will be addressed in a 
-forthcoming paper. Here we just remark that the impact of the bound GC 
-population must be limited because, roughly speaking, it should dilute the true 
-dispersion by a quantity that it is about the difference in quadrature (at the 
-most) of the true dispersion and that of the bound sample (i.e. assuming the 
-central velocity dispersion of the galaxy). If so, then the dilution can be as 
-large as 10-15$\%$, which is enough to explain the saddle in the $v_{\rm rms}$ 
-profile in the radius range $15<R<28$ arcmin corresponding to the bins 
-overlapping with NGC~1387, NGC~1389, NGC~1381 and NGC~1379, while a similar 
-correction for NGC~1404 at $R\sim10$ arcmin would increase the intrinsic $v_{\rm 
-rms}$ to $\sim400$ km s $^{-1}$, i.e. consistently with the peak value at 
-$R\sim 12$ arcmin.
+the true intra-cluster GCs (unbound from any galaxy in the core) will be addressed in a 
+forthcoming paper. 
+%Here we just remark that the impact of the bound GC 
+%population must be limited because, roughly speaking, it should dilute the true 
+%dispersion by a quantity that it is about the difference in quadrature (at the 
+%most) of the true dispersion and that of the bound sample (i.e. assuming the 
+%central velocity dispersion of the galaxy). If so, then the dilution can be as 
+%large as 10-15$\%$, which is enough to explain the saddle in the $v_{\rm rms}$ 
+%profile in the radius range $15<R<28$ arcmin corresponding to the bins 
+%overlapping with NGC~1387, NGC~1389, NGC~1381 and NGC~1379, while a similar 
+%correction for NGC~1404 at $R\sim10$ arcmin would increase the intrinsic $v_{\rm 
+%rms}$ to $\sim400$ km s $^{-1}$, i.e. consistently with the peak value at 
+%$R\sim 12$ arcmin.
 
 In conclusion of this section, we can summarise the main finding of this paper 
 in Figure 9, by saying that the unprecedented extension of the GC kinematics, 
 combined with the literature data, has demonstrated the kinematical signature 
-of a population of intracluster GCs, made of both red GCs and blue GCs. The two 
-populations show $v_{\rm rms}$ profiles consistent with the dynamics of a 
-common cluster potential and also consistent with the velocity dispersion of 
-the innermost cluster galaxies in the Fornax cluster. 
+of a population of intracluster GCs, made of both red GCs and blue GCs. 
+The two populations show v_$v_{\rm rms}$ profiles consistent with the transition of GC 
+dynamics driven by the potential of the central giant elliptical in Fornax (NGC~1399) 
+in the innermost regions to GC dynamics governed by the cluster potential 
+beyond $\sim$10 arcmin ($\sim$50 kpc) galacto-centric distance.
 
 Analogous signatures of intracluster stellar populations have been shown 
-previously in the Virgo and Fornax clusters \citep[see e.g., ][]{Paolillo02, Arnaboldi04, 
+previously in the Virgo, Fornax and Coma clusters \citep[see e.g., ][]{Paolillo02, Arnaboldi04, Peng11,
 Longobardi15} but the catalog presented here will offer a unique 
 chance to perform a fully dynamical analysis of both the bound and unbound GC 
 populations \citep{DAbrusco16}.
 
 \section{Conclusions}
 \label{sec:conclusions}
-In this paper, we presented the results of the widest spectroscopic survey of 
-GCs in the Fornax cluster ever realised, focusing on observations, data 
+In this paper, we presented the results of a wide 1 deg$^2$ spectroscopic survey of 
+GCs in the Fornax cluster, focusing on observations, data 
 reduction and presentation of the final catalogue. This is the first work of a 
 larger multi-instrument program dubbed the Fornax Cluster VLT Spectroscopic 
 Survey (FVSS), which, in synergy with the ongoing Fornax Deep Survey (FDS), 
@@ -1085,15 +1090,16 @@ aims to study the formation, evolution and dynamics of galaxies and small
 stellar systems in the Fornax cluster.
 
 Our analysis is based on observations with VST/OmegaCam for imaging and 25 
-VST/VIMOS masks for spectroscopic follow-up. Objects were pre-selected in 
-multi-band imaging, supported also by the many spectroscopic catalogues already 
+VST/VIMOS masks for spectroscopic follow-up. Objects were pre-selected 
+with multi-band imaging based on optical FDS and near-infrared NGFS photometry, 
+supported also by the many spectroscopic catalogues already 
 present for this region of the sky.  Approximately 4500 objects were observed. 
 The total observation time was 37.5 hours, mostly in sub-arcsec seeing 
 conditions. Data reduction was performed using the ESO VIMOS pipeline. 
 Redshifts were extracted using {\it iraf/fxcor}, whereas the remaining data analysis 
-was carried out using the {\it astropy} suite. Only the Calcium Triplet region was 
-used for redshift estimation, but the quality of the fit was assessed using the 
-full spectrum from 4800 to 10000 \AA\ .
+was carried out using using customer {\it python} code. Only the Calcium Triplet region
+(8498 to 8662 \AA) was used for redshift estimation, but the quality of the fit 
+was assessed using the full spectrum from 4800 to 10000 \AA.
 
 After a visual inspection of candidate spectra, we compiled a consensus 
 catalogue of 372 GCs, 15 UCDs (objects with $i \le 20.3$ mag) and 464 Galactic 
@@ -1102,26 +1108,26 @@ stars. Most GCs belong to the dominant galaxy NGC~1399, but we estimated that
 in the observed field.
 
 We have used the new complete catalog of GCs to derive the total  $v_{\rm rms}$ 
-of the GC sample and also broken the sample in the red and blue subsamples using
-the threshold $(g - i) = 0.85$.
+of the GC sample and also split the sample in red and blue subsamples using
+the threshold $(g - i) = 0.85$ mag.
 We have demonstrated that all profiles show a similar signature at around 
-$R\sim10$ arcmin of a kinematical transition from a low $v_{\rm rms}$ regime to a 
-higher one, with the former being consistent with the central velocity 
+$R\sim10$ arcmin of a kinematical transition from a low $v_{\rm rms}$ regime ($\sim 250 \kms$) to a 
+higher one ($\sim 350 \kms$), with the former being consistent with the central velocity 
 dispersion of NGC~1399 (the central cluster galaxy) and the latter being 
-consistent with the velocity dispersion of the cluster galaxies. This 
+consistent with the velocity dispersion of the Fornax cluster galaxy population. This 
 demonstrates that at $R>10$ arcmin both GC populations feel strongly the cluster 
-potential, rather than the more fable galaxy potential. Parallel to this paper 
+potential, rather than the increasingly weaker galaxy potential galaxy potential. Parallel to this paper 
 we also performed a similar analysis where we present similar evidence based on 
 kinematical distribution of planetary nebulae (PNe) in the core of the cluster, 
 up to 200 Kpc (Spiniello et al. 2018, submitted). PNe also show a rise in the 
 velocity dispersion compatible with PNe tracing the potential of the cluster as 
 a whole. A detailed kinematical characterization of these intra cluster populations will 
-be the topic of a forthcoming analysis. We just point out here that these 
-kinematical evidences corroborate the photometric evidence, found in the deep 
-galaxy photometry, of a transition radius between the bright central galaxy and 
+be the topic of a forthcoming analysis. We point out here that both lines of kinematical 
+evidence (GCs and PNe) corroborate the photometric evidence, found in the deep 
+galaxy photometry, of a transition region between the bright central galaxy and 
 the outer exponential halo at $R\sim10$ arcmin from \citet{Iodice16} and 
 show, from the dynamical point of view, the emergence of an intracluster 
-population of GCs (as well as PNe) in the Fornax Cluster.
+population of GCs (as well as PNe) in the Fornax galaxy Cluster.
 
 \section*{Acknowledgments}
 
@@ -1148,6 +1154,10 @@ GvdV acknowledges funding from the European Research Council (ERC) under
 the European Union's Horizon 2020 research and innovation programme 
 under grant agreement No 724857 (Consolidator Grant ArcheoDyn).
 R.D'A. is supported by NASA contract NAS8-03060 (Chandra X-ray Center).
+THP acknowledges support by the FONDECYT Regular Project No. 1161817 and 
+the BASAL Center for Astrophysics and Associated Technologies (PFB-06).
+This research made use of Astropy, a community-developed core Python 
+package for Astronomy (Astropy Collaboration, 2018)
 
 \bibliographystyle{mn2e}
 \bibliography{ref3}
